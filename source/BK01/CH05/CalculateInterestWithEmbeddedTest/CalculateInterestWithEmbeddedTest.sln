@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31521.260
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculateInterestWithEmbeddedTest", "CalculateInterestWithEmbeddedTest.csproj", "{531E0698-73F1-4D94-BE66-F23061EC5937}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{531E0698-73F1-4D94-BE66-F23061EC5937}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{531E0698-73F1-4D94-BE66-F23061EC5937}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{531E0698-73F1-4D94-BE66-F23061EC5937}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{531E0698-73F1-4D94-BE66-F23061EC5937}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CC356650-A0F7-4677-9E6B-735CE781AF2C}
+	EndGlobalSection
+EndGlobal

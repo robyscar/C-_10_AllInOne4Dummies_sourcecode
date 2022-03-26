@@ -1,0 +1,21 @@
+﻿<Window x:Class="WrapPanel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Wrap Panel - Narrow" Height="180" Width="350">
+    <StackPanel Name="pnlContainer" Width="80">
+        <WrapPanel Name="pnlWrap" Grid.Row="0">
+            <Button Content="A Button"/>
+            <Button Content="Another Button"/>
+            <TextBlock Text="This is a text block"/>
+            <Button Content="Short"/>
+            <Button Content="Really Long Button Label"/>
+        </WrapPanel>
+        <WrapPanel Name="pnlWrap1" Grid.Row="1">
+            <Button x:Name="cmdWidth" Content="Set Wide" 
+                    Click="cmdWidth_Click" />
+        </WrapPanel>
+    </StackPanel>
+</Window>

@@ -1,0 +1,90 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@{
+    var showString = "This is a string.";
+}
+
+@{
+    var codeBehind = new CodeBehind();
+}
+
+@{
+    bool isView1 = Model.changingString == "The string has changed.";
+}
+
+@{
+    int ViewNumber;
+    if (Model.changingString == "This is the changing string.")
+        ViewNumber = 0;
+    else if (Model.changingString == "The string has changed.")
+        ViewNumber = 1;
+    else
+        ViewNumber = 2;
+}
+
+@{
+    string[] Colors = 
+        { "Red", "Orange", "Yellow", "Green", "Blue", "Violet" };
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>It's @DateTime.Now.ToLongDateString()</p>
+    <p id="StringOutput">@showString</p>
+    <p id="StringOutput2">@codeBehind.aString</p>
+    <p>@Model.changingString</p>
+    <form asp-page-handler="view1" method="post">
+        <button>Click to Change Text</button>
+    </form>
+    <form asp-page-handler="view2" method="post">
+        <button>Try Another Change</button>
+    </form>
+    @if(isView1)
+    {
+        <p>Using View1</p>
+    }
+    else
+    {
+        <p>Not Using View1</p>
+    }
+    @switch(ViewNumber)
+    {
+        case 0:
+            <p>Using Original View</p>
+            break;
+        case 1:
+            <p>Using View 1</p>
+            break;
+        case 2:
+            <p>Using View 2</p>
+            break;
+        default:
+            <p>Unrecognized View</p>
+            break;
+    }
+    <h3>Colors</h3>
+    <ul class="text-left">
+    @for(var i = 0; i < Colors.Length; i++)
+    {
+        <li>Color @i is @Colors[i]</li>
+    }
+    </ul>
+    <h3>Colors Using Foreach</h3>
+    @{
+        int counter = 0;
+    }
+    <ul class="text-left">
+    @foreach(string item in Colors)
+    {
+        <li>Color @counter is @item</li>
+        counter++;
+    }
+    </ul>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">
+        building Web apps with ASP.NET Core
+    </a>.</p>
+</div>

@@ -1,0 +1,23 @@
+﻿<Window x:Class="MarginAndPadding.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MarginAndPadding"
+        mc:Ignorable="d"
+        Title="Margin and Padding" Height="250" Width="400">
+    <Border Background="LightBlue" BorderBrush="Black" BorderThickness="5" 
+        Padding="15">
+        <StackPanel Background="White" HorizontalAlignment="Center" 
+                VerticalAlignment="Top">
+            <TextBlock Margin="10,10" FontSize="18" 
+                    HorizontalAlignment="Center">
+            HorizontalAlignment Sample
+            </TextBlock>
+            <Button HorizontalAlignment="Left">Button 1 (Left)</Button>
+            <Button HorizontalAlignment="Right">Button 2 (Right)</Button>
+            <Button HorizontalAlignment="Center">Button 3 (Center)</Button>
+            <Button HorizontalAlignment="Stretch">Button 4 (Stretch)</Button>
+        </StackPanel>
+    </Border>
+</Window>

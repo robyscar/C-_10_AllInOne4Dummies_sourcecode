@@ -1,0 +1,55 @@
+﻿<Window x:Class="ListBasedControls.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="List-Based Controls" Height="300" Width="510">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <ComboBox Grid.Column="0" Height="20" Width="100" 
+                  HorizontalAlignment="Stretch" VerticalAlignment="Top">
+            <ListBoxItem Content="One"/>
+            <ListBoxItem Content="Two"/>
+            <ListBoxItem Content="Three"/>
+            <ListBoxItem Content="Four"/>
+            <ListBoxItem Content="Five"/>
+        </ComboBox>
+        <ListBox Grid.Column="1" Height="150" Width="100" 
+                 HorizontalAlignment="Stretch" VerticalAlignment="Top">
+            <ListBoxItem Content="One"/>
+            <ListBoxItem Content="Two"/>
+            <ListBoxItem Content="Three"/>
+            <ListBoxItem Content="Four"/>
+            <ListBoxItem Content="Five"/>
+        </ListBox>
+        <TreeView Name="myTreeViewEvent" Grid.Column="2" >
+            <TreeViewItem Header="Employee1" IsSelected="True">
+                <TreeViewItem Header="Jesper Aaberg"/>
+                <TreeViewItem Header="Employee Number">
+                    <TreeViewItem Header="12345"/>
+                </TreeViewItem>
+                <TreeViewItem Header="Work Days">
+                    <TreeViewItem Header="Monday"/>
+                    <TreeViewItem Header="Tuesday"/>
+                    <TreeViewItem Header="Thursday"/>
+                </TreeViewItem>
+            </TreeViewItem>
+            <TreeViewItem Header="Employee2">
+                <TreeViewItem Header="Dominik Paiha"/>
+                <TreeViewItem Header="Employee Number">
+                    <TreeViewItem Header="98765"/>
+                </TreeViewItem>
+                <TreeViewItem Header="Work Days">
+                    <TreeViewItem Header="Tuesday"/>
+                    <TreeViewItem Header="Wednesday"/>
+                    <TreeViewItem Header="Friday"/>
+                </TreeViewItem>
+            </TreeViewItem>
+        </TreeView>
+    </Grid>
+</Window>

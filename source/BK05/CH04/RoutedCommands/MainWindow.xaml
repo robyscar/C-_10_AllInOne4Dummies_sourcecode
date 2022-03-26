@@ -1,0 +1,33 @@
+﻿<Window x:Class="RoutedCommands.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RoutedCommands"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="200" Width="400">
+
+    <Window.CommandBindings>
+        <CommandBinding Command="local:Command.cmdSayHello"
+                        CanExecute="CommandBinding_CanExecute"
+                        Executed="CommandBinding_Executed"/>
+    </Window.CommandBindings>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+
+        <Menu Grid.Row="0" HorizontalAlignment="Left" Name="menu1">
+            <MenuItem Command="local:Command.cmdSayHello"/>
+        </Menu>
+
+        <TextBox Name="NameStr"  Grid.Row="1" HorizontalAlignment="Left" 
+                 Width="200"/>
+        <Button Grid.Row="2" Content="Say Hello" 
+                HorizontalAlignment="Right" 
+                Command="local:Command.cmdSayHello"/>
+    </Grid>
+</Window>
